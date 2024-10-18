@@ -1,0 +1,94 @@
+.admin-dashboard {
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between title and logout button */
+    align-items: center; /* Center vertically */
+}
+
+.admin-dashboard h2 {
+    margin-bottom: 20px;
+}
+
+/* Logout button styles */
+.logout-button {
+    background-color: #dc3545; /* Red background for logout button */
+    color: white; /* White text color */
+    padding: 1px px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.logout-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* User cards container */
+.user-cards-container {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center cards horizontally */
+}
+
+/* Individual user card */
+.user-card {
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd;    /* Light border for separation */
+    border-radius: 8px;        /* Rounded corners */
+    padding: 15px;             /* Padding inside each card */
+    margin: 10px;              /* Margin around each card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Animation for hover effect */
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row with spacing */
+    max-width: calc(33.333% - 20px); /* Maximum width for cards */
+}
+
+.user-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+/* Image gallery */
+.image-gallery {
+    display: grid;          /* Use CSS Grid for image gallery */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive grid */
+    gap: 10px;             /* Space between images */
+    margin-top: 10px;      /* Space above the image gallery */
+}
+
+/* Thumbnail images */
+.thumbnail {
+    width: 100%;           /* Full width for responsive images */
+    height: auto;          /* Maintain aspect ratio */
+    border-radius: 4px;    /* Rounded corners for images */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1024px) {
+    .user-card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
+        max-width: calc(50% - 20px); /* Maximum width for cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .user-card {
+        flex: 1 1 calc(100% - 20px); /* Full width cards on smaller screens */
+        max-width: calc(100% - 20px); /* Maximum width for cards */
+    }
+
+    .admin-dashboard h2 {
+        font-size: 24px; /* Adjust heading size */
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-dashboard h2 {
+        font-size: 20px; /* Adjust heading size for very small screens */
+    }
+}
